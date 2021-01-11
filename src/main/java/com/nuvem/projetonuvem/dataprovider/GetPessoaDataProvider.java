@@ -16,7 +16,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class GetPessoaDataProvider implements GetPessoaGateway {
 
-    private static final Logger logger = LoggerFactory.getLogger(MessageUtil.GET_PESSOA_CHAMANDO_DATAPROVIDER);
+    //private static final Logger logger = LoggerFactory.getLogger(MessageUtil.GET_PESSOA_CHAMANDO_DATAPROVIDER);
 
     private final PessoaRepository repository;
 
@@ -24,7 +24,7 @@ public class GetPessoaDataProvider implements GetPessoaGateway {
 
 
     @Override
-    public List<GetPessoaResponse> getPessoa() {
+    public List<PessoaEntity> getPessoa() {
 
         return mapper.toEntities(repository.getAllPessoa());
     }
